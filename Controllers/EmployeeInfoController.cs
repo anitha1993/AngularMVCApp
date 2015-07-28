@@ -3,16 +3,18 @@ using System.Web.Mvc;
 
 namespace AwesomeAngularMVCApp.Controllers
 {
+    [Authorize]
     public class EmployeeInfoController : Controller
     {
-       // [Authorize]
-       [AuthLog]
+        
+       //[AuthLog]
         [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
         }
-        [AuthLog(Roles = "Admin, Employee")]
+        //[AuthLog(Roles = "Admin, Employee")]
+        [Authorize(Roles = "Admin, Employee")]
         public ActionResult EmployeeLanding()
         {
             return View();
@@ -25,7 +27,7 @@ namespace AwesomeAngularMVCApp.Controllers
             return PartialView("AddEmployee");
         }
 
-      // [Authorize(Roles ="Admin, Employee")]
+       //[Authorize(Roles ="Admin, Employee")]
         [AuthLog(Roles = "Admin, Employee")]
        // [AllowAnonymous]
         public ActionResult ShowEmployees()
@@ -33,8 +35,8 @@ namespace AwesomeAngularMVCApp.Controllers
             return PartialView("ShowEmployees");
         }
 
-       // [Authorize(Roles = "Admin")]
-           [AuthLog(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
+          [AuthLog(Roles = "Admin")]
         public ActionResult EditEmployee()
         {
             return PartialView("EditEmployee");

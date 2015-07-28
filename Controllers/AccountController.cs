@@ -99,8 +99,8 @@ namespace AwesomeAngularMVCApp.Controllers
             }
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
-        [Authorize(Roles = "Admin")]
-        //[AuthLog(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
+        [AuthLog(Roles = "Admin")]
         public ActionResult Register()
         {
             //   ViewBag.Roles = new SelectList(context.Roles.ToList(), "Name", "Name");
@@ -110,7 +110,7 @@ namespace AwesomeAngularMVCApp.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [AuthLog(Roles = "Admin")]
+      
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)

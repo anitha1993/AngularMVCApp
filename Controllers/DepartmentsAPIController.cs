@@ -8,6 +8,7 @@ using AwesomeAngularMVCApp.Models;
 
 namespace AwesomeAngularMVCApp.Controllers
 {
+  
     public class DepartmentsAPIController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();

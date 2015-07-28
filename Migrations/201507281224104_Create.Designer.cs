@@ -7,13 +7,13 @@ namespace AwesomeAngularMVCApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.2-31219")]
-    public sealed partial class rollback : IMigrationMetadata
+    public sealed partial class Create : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(rollback));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Create));
         
         string IMigrationMetadata.Id
         {
-            get { return "201507280633041_rollback"; }
+            get { return "201507281224104_Create"; }
         }
         
         string IMigrationMetadata.Source

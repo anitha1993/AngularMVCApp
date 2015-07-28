@@ -186,13 +186,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507280620460_InitialCreate.cs" />
-    <Compile Include="Migrations\201507280620460_InitialCreate.Designer.cs">
-      <DependentUpon>201507280620460_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201507280633041_rollback.cs" />
-    <Compile Include="Migrations\201507280633041_rollback.Designer.cs">
-      <DependentUpon>201507280633041_rollback.cs</DependentUpon>
+    <Compile Include="Migrations\201507281224104_Create.cs" />
+    <Compile Include="Migrations\201507281224104_Create.Designer.cs">
+      <DependentUpon>201507281224104_Create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1088,11 +1084,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507280620460_InitialCreate.resx">
-      <DependentUpon>201507280620460_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507280633041_rollback.resx">
-      <DependentUpon>201507280633041_rollback.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507281224104_Create.resx">
+      <DependentUpon>201507281224104_Create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
