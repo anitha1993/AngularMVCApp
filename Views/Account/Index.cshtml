@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html @*ng-app="AwesomeAngularMVCApp"*@ ng-controller="EmployeeController">
+<head>
+    <title ng-bind="models.helloAngular"></title>
+</head>
+<body>
+    <h1>{{models.helloAngular}}</h1>
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            
+        </tr>
+        <tr>
+            <td>Jill</td>
+            
+        </tr>
+       
+       
+    </table>
+
+    @*<div ng-view></div>*@
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.min.js"></script>
+
+    @Scripts.Render("~/bundles/AwesomeAngularMVCApp")
+</body>
+</html>
+
+

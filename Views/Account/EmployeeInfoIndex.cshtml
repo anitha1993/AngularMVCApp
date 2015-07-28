@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Index</h2>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<body class="table">
+    <div>
+        <div>
+            <div>
+                <table>
+                    <tr>
+                        <td><a href="#/showemployees"> Show Employees </a></td>
+                        <td><a href="#/addemployee"> Add Employee </a></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                @*<div ng-view></div>*@
+            <table class="table" ng-controller="ShowEmployeesController" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Emp
+            </th>
+            <th>Salary</th>
+            <th>DeptName</th>
+            <th>Designation</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr ng-repeat="Emp in Employees">
+            <td>{{Emp.Id}}</td>
+            <td>{{Emp.EmpName}}</td>
+            <td>{{Emp.Salary}}</td>
+            <td>{{Emp.DeptName}}</td>
+            <td>{{Emp.Designation}}</td>
+            <td><a ng-click="editEmployee(Emp.Id)">Edit</a></td>
+            <td><a ng-click="deleteEmployee(Emp.Id)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<div>{{error}}</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+@*@section scripts{
+        <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/AwesomeAngularMVCApp.js")"></script>
+        <script src="~/Scripts/Factories/Services.js"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Controllers/ShowEmployeesController.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Controllers/AddEmployeeController.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Controllers/EditEmployeeController.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Controllers/DeleteEmployeeController.js")"></script>
+    }*@
+
+@*@section scripts{
+        <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/MyScripts/Module.js")"></script>
+        <script src="~/MyScripts/Services.js"></script>
+        <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowEmployeesController.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/MyScripts/AddEmployeeController.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/MyScripts/EditEmployeeController.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteEmployeeController.js")"></script>
+    }*@

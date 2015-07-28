@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>Add New User</h2>
+<table>
+    @*<tr>
+        <td>Id</td>
+        <td><input type="text" ng-model="Id" />  </td>
+    </tr>*@
+    <tr>
+        <td>Name</td>
+        <td><input type="text" ng-model="UserName" />  </td>
+    </tr>
+   
+    <tr>
+        <td>Department:</td>
+
+        <td>
+            <select ng-model="Departments" ng-options="d.Name for d in DepartmentsList">
+                <option value="">Select Department</option>
+            </select>
+        </td>
+    </tr>
+    
+</table>
+<input type="button" value="Save" ng-click="save()" />
+

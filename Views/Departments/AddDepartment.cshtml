@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "AddDepartment";
+}
+
+<h2>Add New Department</h2>
+<table>
+    <tr>
+        @*<td>Id</td>*@
+        <td><input type="hidden" ng-model="Id" />  </td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" ng-model="Name" />  </td>
+    </tr>
+  
+</table>
+<input type="button" value="Save" ng-click="save()" />
+

@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "EditDepartment";
+}
+
+<h2>Edit Department</h2>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td><input type="text" ng-disabled="Department.Id" ng-model="Department.Id" />  </td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" ng-model="Department.Name" />  </td>
+    </tr>
+  
+</table>
+<input type="button" value="Save" ng-click="save()" />
+<div>{{error}}</div>

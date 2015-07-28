@@ -1,0 +1,25 @@
+﻿<form >
+    <label for="username">User Name:</label><br />
+    <input id="username" type="text" ng-model="registerForm.username" required />
+    <br />
+    <label for="emailAddress">Email Address:</label><br />
+    <input id="emailAddress" type="text" ng-model="registerForm.emailAddress" required />
+    <br />
+    <label for="Departments">Department:</label><br />
+    <select ng-model="Departments" ng-options="d.Name for d in DepartmentsList">
+        <option value="">Select Department</option>
+    </select>
+
+    <br />
+
+    <label for="Roles">Role:</label><br />
+    <select ng-model="Roles" ng-options="r.Name for r in RolesList">
+        <option value="">Select Role</option>
+    </select>
+
+    <br />
+    <br />
+    <button type="submit" ng-click="Register(Roles)">Register</button>
+    <br />
+    <span ng-bind="name"></span>
+</form>

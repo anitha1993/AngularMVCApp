@@ -1,0 +1,27 @@
+﻿
+<h2>List of Departments</h2>
+<a ng-controller="ShowDepartmentsController" ng-click="addDepartment()"> Add Department</a>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>
+                Department
+            </th>
+            
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="Dept in Departments">
+            <td>{{Dept.Id}}</td>
+            <td>{{Dept.Name}}</td>
+            
+            <td><a ng-click="editDepartment(Dept.Id)"><i class="icon-hand-right"></i>Edit</a></td>
+            <td><a ng-click="deleteDepartment(Dept.Id)"><i class="icon-hand-right"></i>Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<div>{{error}}</div>

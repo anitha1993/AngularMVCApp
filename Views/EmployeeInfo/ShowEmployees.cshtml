@@ -1,0 +1,31 @@
+﻿
+<h2>List of Employees</h2>
+<a  @*ng-show="isUserAdmin"*@ ng-controller="ShowEmployeesController" ng-click="addEmployee()"> Add Employee </a>
+<br />
+<table class="table" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Emp
+            </th>
+            <th>Salary</th>
+            <th>DeptName</th>
+            <th>Designation</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="Emp in Employees">
+            <td>{{Emp.Id}}</td>
+            <td>{{Emp.EmpName}}</td>
+            <td>{{Emp.Salary}}</td>
+            <td>{{Emp.DeptName}}</td>
+            <td>{{Emp.Designation}}</td>
+          
+             <td><a @*ng-show="isUserAdmin"*@ ng-click="editEmployee(Emp.Id)">Edit</a></td>
+            <td><a  @*ng-show="isUserAdmin"*@ ng-click="deleteEmployee(Emp.Id)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<div>{{error}}</div>

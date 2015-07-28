@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<body ng-app="ApplicationModule" class="table">
+    <div>
+        <div>
+            <div>
+                <h1>Employee Management Portal</h1>
+            </div>
+            <div>
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/Module.js")"></script>
+    <script src="~/MyScripts/Services.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/RegistrationFactory.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/LoginFactory.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/LoginController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/RegisterController.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowEmployeesController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/AddEmpController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/EditEmployeeController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteEmployeeController.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowDepartmentsController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/AddDepartmentController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/EditDepartmentController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteDepartmentController.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowUsersController.js")"></script>
+
+}

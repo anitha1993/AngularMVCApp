@@ -1,0 +1,29 @@
+﻿
+<h2>List of Users</h2>
+<a @*ng-show="isUserAdmin"*@ ng-controller="ShowUsersController" ng-click="addUsers()"> Add Users </a>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                User
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="User in Users">
+           
+            <td>{{User.UserName}}</td>
+
+
+
+
+            <td><a @*ng-show="isUserAdmin"*@ ng-click="editUser(User.Id)">Edit</a></td>
+            <td><a @*ng-show="isUserAdmin"*@ ng-click="deleteUser(User.Id)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<div>{{error}}</div>

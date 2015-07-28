@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Departments";
+}
+@* I will add some css for looks good *@
+<style>
+    .tableData {
+        border-left: solid 1px #D8C3C3;
+        border-top: solid 1px #D8C3C3;
+    }
+
+        .tableData tr {
+        }
+
+        .tableData td, .tableData th {
+            border-right: solid 1px #D8C3C3;
+            border-bottom: solid 1px #D8C3C3;
+            text-align: left;
+            padding: 5px;
+        }
+
+        .tableData td {
+        }
+
+        .tableData th {
+            background-color: #FAFAFA;
+            padding: 7px 5px;
+            border-bottom-color: #9C9C9C;
+        }
+
+    .odd {
+        background-color: #f3f3f3;
+    }
+
+    .even {
+        background-color: #ffffff;
+    }
+</style>
+<h2>Part4</h2>
+<div ng-controller="DepartmentsController">
+    <table class="tableData"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Department ID</th>
+            <th>Department Name</th>
+           
+        </tr>
+        <tr ng-repeat="d in Departments" ng-class-odd="'odd'" ng-class-even="'even'">
+            <td>{{d.Id}}</td>
+            <td>{{d.Name}}</td>
+          
+        </tr>
+    </table>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Controller/DepartmentsController.js"></script>
+}

@@ -1,0 +1,33 @@
+﻿@*@using Microsoft.AspNet.Identity*@
+@*@if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            </ul>
+        }
+    }
+    else
+    {*@
+
+
+
+<ul class="nav navbar-nav navbar-right">
+    @*<li><a href="#/logout" ng-show="isUserLoggedIn">Logout </a> </li>*@
+    @*<li> <a href="#/login" ng-show="isUserLoggedIn" ng-controller="LoginController" ng-click="logout()">Logout</a></li>*@
+    @*<li><a href="#/login" ng-show="!isUserLoggedIn"  ng-click="logout()">Login</a></li>*@
+    @*<li id="loginLink"><a href="#/Login">Login</a></li>*@
+    @*<li><a href="#/Register">Register</a></li>*@
+    @*<li><a href="#/EmployeeLanding">Employees</a></li>*@
+
+    @*<li><a href="/ShowEmployees">ShowEmployees</a></li>*@
+
+
+</ul>
+

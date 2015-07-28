@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "DeleteDepartment";
+}
+
+<h2>DeleteDepartment</h2>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>{{Department.Id}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{Department.Name}}</td>
+    </tr>
+ 
+</table>
+<input type="button" value="Delete" ng-click="delete()" />
