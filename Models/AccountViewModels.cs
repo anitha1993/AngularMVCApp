@@ -87,8 +87,13 @@ namespace AwesomeAngularMVCApp.Models
         [Display(Name = "User Name")]
 
         public string UserName { get; set; }
-        [Required]
+        
         [EmailAddress]
+        [Required(ErrorMessage = "Email is Required")]
+        [RegularExpression(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                           @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                           @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$",
+                           ErrorMessage = "Email is not valid")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 

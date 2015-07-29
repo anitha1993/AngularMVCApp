@@ -1,6 +1,7 @@
 ﻿//The controller has dependency upon the Service and ShareData
 app.controller('ShowEmployeesController', function ($scope,$rootScope, $location, SinglePageCRUDService, ShareData) {
-    $scope.isUserLoggedIn = false;
+     $scope.isUserLoggedIn = false;
+    //$scope.isUserLoggedIn = true;
     loadRecords();
 
     //Function to Load all Employees Records.   

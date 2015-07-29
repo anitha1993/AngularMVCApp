@@ -1,23 +1,30 @@
-﻿<form ng-submit="login()" novalidate>
-    @*<label for="emailAddress">Email Address:</label> <br />
-    <input type="email" ng-model="loginForm.emailAddress" id="emailAddress" /><br /><br />*@
-    
+﻿<form ng-submit="login()" name="form" novalidate >
+    <style>
+        input.ng-invalid {
+            border: 1px solid red;
+        }
+
+        input.ng-valid {
+            border: 1px solid blue;
+        }
+    </style>
+
     <label for="username">User Name:</label> <br />
-    <input type="text" ng-model="loginForm.username" id="username" required/><br /><br />
-    @*<span style="color:red" ng-show="loginForm.username.$dirty && loginForm.username.$invalid">
-        <span ng-show="loginForm.username.$error.required">Username is required.</span>
-    </span>*@
+    <input type="text" name="username" ng-model="loginForm.username" id="username" required="required"/>
+    <span ng-show="form.username.$dirty && form.username.$error.required">Required!</span><br /><br />
+
+   
     
      <label for="password">Password:</label><br />
-    <input type="password" id="password" ng-model="loginForm.password" required /><br /><br />
-    @*<span ng-show="loginForm.password.$error.required">Password is required.</span>*@
+    <input type="password" name="password" id="password" ng-model="loginForm.password" required />
+    <span ng-show="form.password.$dirty && form.password.$error.required">Required!</span><br /><br />
   
   
 
     <label for="rememberMe">Remember Me:</label>
     <input type="checkbox" id="rememberMe" ng-model="loginForm.rememberMe" /><br /><br />
 
-    <button type="submit">Login</button>
+    <button type="submit" ng-disabled="form.$invalid">Login</button>
 </form>
 
 <span ng-bind="name"></span>

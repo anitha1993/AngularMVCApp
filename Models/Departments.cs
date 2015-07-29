@@ -10,7 +10,7 @@ namespace AwesomeAngularMVCApp.Models
 
 
         [DisplayName("Department Name")]
-        [Required]
+        [Required(ErrorMessage = "Department Name is Required")]
         public string Name { get; set; }
 
        // public virtual List<EmployeeInfo> EmployeeInfo{ get; set; }
